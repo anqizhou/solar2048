@@ -1,10 +1,36 @@
+@font-face {
+  font-family: "Clear Sans";
+  src:"/fonts/ClearSans-Bold.ttf";
+}
+ /*Defining font */
 
+body {
+  background-color: #222A30;
+  font-family: "Clear Sans";
+  text-align: center;
+  color: #FFF;
+
+}
+
+.board {
+  margin: 0 auto;
+  width: 617px;
+  height: 617px;
+  color: #222A30;
+  background: #CCC;
+}
 
 .cell {
-	background-color: #D6D2D2;
+	background-color: #A3BFC6;
+  font: #FF005D;
+  font-size: 2.8em;
   border: 4px solid white;
   width: 150px;
   float: left;
   height: 150px;
-  border-radius: 10%
+  margin: 2px;
+}
+
+.cell div {
+  margin-top: 42px;
 }
