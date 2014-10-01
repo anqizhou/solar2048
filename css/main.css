@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Clear Sans";
-  src:"/fonts/ClearSans-Bold.ttf";
+  src: url("/fonts/ClearSans-Bold.ttf");
 }
  /*Defining font */
 
