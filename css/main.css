@@ -5,6 +5,8 @@
  /*Defining font */
 
 body {
+  background-image: url('http://freetopwallpaper.com/wp-content/gallery/deep-sea/deep-sea-wallpaper-hd-22.jpg');
+  background-size:100%;
   background-color: #222A30;
   font-family: "Clear Sans";
   text-align: center;
@@ -12,7 +14,19 @@ body {
 }
 
 h1 {
+  font-size: 50px;
   margin-bottom: 20px;
+  color:#F5007B;
+  text-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+li {
+  list-style: none;
+  display: -webkit-inline-box;
+  margin: 0 50px;
+  font-size: 30px;
+  text-shadow: 3px 3px 3px rgba(0,0,0,0.5);
+  color: #F5007B;
 }
 
 .board {
@@ -20,7 +34,9 @@ h1 {
   width: 700px;
   height: 700px;
   color: #222A30;
-  border:40px solid rgba(138, 138, 138, .2)
+  border:40px solid rgba(138, 138, 138, .2);
+  border-radius: 10%;
+  position:relative;
 }
 
 .cell {
@@ -86,13 +102,30 @@ h1 {
 }
 
 .val-1024{
-  background-color: #F656A7;
+  background-color: #FAE69D;
   opacity: 1;
 }
 
 .val-2048{
-  background-color: #F80B83;
+  background-color: #EDEF9D;
   opacity: 1;
 }
 
 
+#lostbox {
+  background:linear-gradient(to bottom right, #AADBFD, rgba(240,184,212,1));
+  width: 350px;
+  height: 100px;
+  opacity: 0;
+  float:left;
+/*  display:none;*/
+  border-radius: 80%;
+  position:absolute;
+  top: 250px;
+  left: 140px;
+}
+
+h2 {
+  font-size:60px;
+  color: #F5007B;
+}

@@ -142,6 +142,14 @@ moveIsValid = (oriBoard, newBoard) ->
         return true
   false
 
+shakeNewValue = (oriBoard, newBoard) ->
+  for row in [0..3]
+    for col in [0..3]
+      if oriBoard[row][col] isnt newBoard[row][col]
+        $('.r#{row}.c#{col}').toggle( "bounce", { times: 1 }, "slow" )
+#### Trying toggle
+
+
 isGameOver = (board) ->
   boardIsFull(board) and noValidMove(board)
 
@@ -169,6 +177,28 @@ transpose = (board) ->
       newBoard[col][row] = value
   newBoard
 
+#Stopwatch
+
+seconds = 0
+minutes = 0
+
+add = ->
+    seconds = seconds + 1
+    $('#sw_s').html(seconds)
+    if seconds >= 60
+        seconds = 0
+        minutes = minutes + 1
+        $('#sw_m').html(minutes)
+    timer()
+
+timer = ->
+    setTimeout(add, 1000)
+
+
+
+
+
+
 
 # Check if transpose works
 # console.log transpose([[1, 1, 1, 1], [2, 2, 2, 2], [3, 3, 3, 3], [4, 4, 4, 4]])
@@ -180,7 +210,16 @@ $ ->
   generateTile(@board)
   printArray(@board)
   showBoard(@board)
+  timer()
 
+  $('#restart, #stopwatch').mouseover (event) ->
+    $(this).css('font-size', '40px')
+
+  $('#restart, #stopwatch').mouseleave (event) ->
+    $(this).css('font-size', '30px')
+
+  $('#restart, #stopwatch').click (event) =>
+    document.location.reload(true)
 
   $('body').keydown (event) =>
     key = event.which
@@ -207,19 +246,24 @@ $ ->
         @board = newBoard
         #Generate new tile
         generateTile(@board)
+
         showBoard(@board)
+        # shakeNewValue(oldBoard, @board)
         #Show new board on the screen
         #Check Game lost
+
+
 
       else
         console.log "invalid"
         if isGameOver(@board)
           console.log "You Lose!"
+          $('#lostbox').fadeTo( "slow" , 0.8)
 
 
 
 
       # check moving validily
-    else
+    # else
       #do nothing
 

@@ -3,15 +3,20 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Solar 2048</title>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 	<body>
 <!--		<div class="row"> -->
 
 <!--		<div class="col-xs-6 col-xs-offset-3"> -->
-				<h1>My Planetarium 2048</h1>
-
+				<h1>My Aquarium 2048</h1>
+				<div class="logistics">
+					<ul>
+						<li id="stopwatch"><span id="sw_m">00</span>:<span id="sw_s">00</span></li>
+						<li id="restart">new game</li>
+					</ul>
+				</div>
 				<div class="board">
 					<div class="cell r0 c0"><div>2048</div></div>
 					<div class="cell r0 c1"><div>2048</div></div>
@@ -29,13 +34,19 @@
 					<div class="cell r3 c1"><div>2048</div></div>
 					<div class="cell r3 c2"><div>2048</div></div>
 					<div class="cell r3 c3"><div>2048</div></div>
+					<div id="lostbox">
+						<h2>You Lost...</h2>
+					</div>
 				</div>
+
+
+
 			</div>
 		</div>
 	</body>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
