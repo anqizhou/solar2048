@@ -46,12 +46,12 @@ showBoard = (board) ->
   for row in [0..3]
     for col in [0..3]
       for powerNum in [1..11]
-        $(".r#{row}.c#{col} > div").removeClass("val-#{2**powerNum}")
+        $(".r#{row}.c#{col}").removeClass("val-#{2**powerNum}")
       if board[row][col] == 0
         $(".r#{row}.c#{col} > div").html('')
       else
         $(".r#{row}.c#{col} > div").html(board[row][col])
-        $(".r#{row}.c#{col} > div").addClass("val-#{board[row][col]}")
+        $(".r#{row}.c#{col}").addClass("val-#{board[row][col]}")
 
 
 move = (board, direction) ->

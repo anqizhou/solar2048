@@ -58,13 +58,13 @@
         _results1 = [];
         for (col = _j = 0; _j <= 3; col = ++_j) {
           for (powerNum = _k = 1; _k <= 11; powerNum = ++_k) {
-            $(".r" + row + ".c" + col + " > div").removeClass("val-" + (Math.pow(2, powerNum)));
+            $(".r" + row + ".c" + col).removeClass("val-" + (Math.pow(2, powerNum)));
           }
           if (board[row][col] === 0) {
             _results1.push($(".r" + row + ".c" + col + " > div").html(''));
           } else {
             $(".r" + row + ".c" + col + " > div").html(board[row][col]);
-            _results1.push($(".r" + row + ".c" + col + " > div").addClass("val-" + board[row][col]));
+            _results1.push($(".r" + row + ".c" + col).addClass("val-" + board[row][col]));
           }
         }
         return _results1;
